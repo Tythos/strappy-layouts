@@ -1,0 +1,51 @@
+<style>
+    .FloatingLayout {
+        position: absolute;
+        border-radius: 6px;
+        overflow: hidden;
+        border: 1px solid #333;
+    }
+
+    .FloatingTitle {
+        background-image: linear-gradient(#555, #333);
+        color: #777;
+        font-family: sans-serif;
+        text-align: center;
+        font-size: 0.8em;
+        cursor: grab;
+        height: 20px;
+        padding-top: 4px;
+    }
+
+    .FloatingClose {
+        float: right;
+        cursor: pointer;
+        padding-right: 6px;
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+
+    .FloatingClose:hover {
+        color: #fff;
+    }
+    
+    .FloatingContent {
+        background-color: rgba(50, 50, 50, 0.5);
+        padding: 6px;
+        font-family: sans-serif;
+        font-size: 0.8em;
+        color: #ddd;
+        overflow-y: scroll;
+    }
+</style>
+<div class="FloatingLayout" style="
+    left: {{left}}px;
+    top: {{top}}px;
+    max-width: {{maxWidth}}px;
+">
+    <div class="FloatingTitle">
+        {{title}}
+        <div class="FloatingClose">&times;</div>
+    </div>
+    <div class="FloatingContent" style="max-height:{{maxHeight}}px;"></div>
+</div>

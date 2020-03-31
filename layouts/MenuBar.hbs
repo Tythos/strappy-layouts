@@ -1,0 +1,25 @@
+<style>
+    .MenuBarLayout {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 40px;
+        background-color: #111;
+    }
+
+    .MenuBarItem {
+        opacity: 0.5;
+        cursor: pointer;
+        padding: 4px;
+    }
+
+    .MenuBarItem:hover {
+        opacity: 1.0
+    }
+</style>
+<div class="MenuBarLayout">
+    {{#each items}}
+        <img class="MenuBarItem" src="{{this}}" border="0"/>
+    {{/each}}
+</div>

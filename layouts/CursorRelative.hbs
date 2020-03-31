@@ -1,0 +1,15 @@
+<style>
+    .CursorRelativeLayout {
+        position: absolute;
+    }
+
+    .CursorRelativeItem {
+        position: absolute;
+    }
+</style>
+<div class="CursorRelativeLayout" style="
+    left:{{x}}px;
+    top:{{y}}px;
+">
+    {{#each items}}<div class="CursorRelativeItem"></div>{{/each}}
+</div>
